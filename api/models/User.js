@@ -15,9 +15,16 @@ const User = sequelize.define('User', {
   email: {
     type: Sequelize.STRING,
     unique: true,
+    allowNull: false,
   },
   password: {
     type: Sequelize.STRING,
+    allowNull: false,
+  },
+  username: {
+    unique: true,
+    type: Sequelize.STRING,
+    allowNull: false,
   },
 }, { hooks, tableName });
 

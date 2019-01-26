@@ -11,6 +11,7 @@ const UserController = () => {
         const user = await User.create({
           email: body.email,
           password: body.password,
+          username: body.username,
         });
         const token = authService().issue({ id: user.id });
 
